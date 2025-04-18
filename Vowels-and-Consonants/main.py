@@ -7,14 +7,14 @@
 # Main function
 def main():
     # Get string from user
-    user_str = input('Enter a string of characters: ')  # Fixed 'inpuut' to 'input' and added colon
+    user_str = input('Enter a string of characters: ')
 
     # Report the vowels and consonants
-    print('That string has', num_vowels(user_str), 'vowels and', num_consonants(user_str), 'consonants.')  # Fixed backslash and formatting
+    print('That string has', num_vowels(user_str), 'vowels and', num_consonants(user_str), 'consonants.')
 
 # The num_vowels function returns the number of
 # vowels in the string passed as an argument.
-def num_vowels(s):  # Parameter name should be consistent (s, not S)
+def num_vowels(s):
     # Make a list containing the vowels
     vowels = ['a', 'e', 'i', 'o', 'u']
 
@@ -33,7 +33,7 @@ def num_vowels(s):  # Parameter name should be consistent (s, not S)
 # consonants in the string passed as an argument.
 def num_consonants(s):
     # Make a vowel list
-    vowels = {'a', 'e', 'i', 'o', 'u'}  # Fixed bracket type (was a mix of set and list)
+    vowels = {'a', 'e', 'i', 'o', 'u'}
 
     # Initialize the accumulator
     c_count = 0
