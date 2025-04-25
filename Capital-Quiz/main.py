@@ -1,10 +1,9 @@
 #
-# Name
-# Date
+# Luke Jayroe
+# 4/25/2025
 # Capital Quiz Programming Project
 # COSC 1010
 #
-# Use comments liberally throughout the program. 
 
 import random
 
@@ -37,8 +36,27 @@ def main():
                 'Wisconsin':'Madison', 'Wyoming':'Cheyenne'}
 
     # Local variables
+    correct = 0
+    incorrect = 0
 
-    # Continue until user quits the game.
+    # Continue until user quits the game
+    while True:
+        state = random.choice(list(capitals.keys()))
+        answer = input(f"What is the capital of {state}? ").strip()
 
-# Call the main function.
+        if answer.lower() == capitals[state].lower():
+            print("Correct!")
+            correct += 1
+        else:
+            print(f"Incorrect. The capital of {state} is {capitals[state]}.")
+            incorrect += 1
+
+        print(f"Score: {correct} correct, {incorrect} incorrect")
+
+        play_again = input("Do you want to try another? (yes/no): ").strip().lower()
+        if play_again != 'yes':
+            print("Thanks for playing!")
+            break
+
+# Call the main function
 main()
